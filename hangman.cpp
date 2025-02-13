@@ -50,7 +50,7 @@ int main()
 
     int lives{ 5 };
 
-    while (lives > 0 || std::all_of(answer_map.begin(), answer_map.end(), [](bool flag) { return flag; }))
+    while (lives > 0 && !std::all_of(answer_map.begin(), answer_map.end(), [](bool flag) { return flag; }))
     {
         print(answer_vector, answer_map);
         std::cout << "Enter a character: ";
@@ -89,7 +89,7 @@ int main()
     }
     else
     {
-        std::cout << "You won!" << answer << std::endl;
+        std::cout << "You won!" << std::endl;
     }
 
     return 0;
